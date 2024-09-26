@@ -2,3 +2,28 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+START
+
+Generate a random int between 1 & 10
+Store in variable 'secretNumber'
+
+FOR (guess 1 thru 3):
+
+    PRINT "Guess a number between 1 & 10"
+    Get user input from keyboard
+    Store in variable 'userInput'
+
+    IF 'userInput' equals 'secretNumber':
+        PRINT "You win!"
+        EXIT program
+    ELSE:
+        PRINT "Nope try again"
+    END IF
+
+END FOR
+
+// If code reaches this point, then the loop has executed 3 times
+// without a correct guess, ie. the user has expended 3 guesses.
+
+PRINT "You lose!"
+END
