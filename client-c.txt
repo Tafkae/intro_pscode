@@ -2,3 +2,33 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+START
+
+DO:
+
+    'done' = initialize to FALSE
+    'count' = initialize to 0
+
+    WHILE 'count' is less than 50:
+
+        AWAIT input signal from scanner,
+        proceed once signal received.
+
+        increment 'count' by 2
+        PRINT 'count'
+
+    END WHILE
+
+    Display button that says "NEXT CASE"
+    Display button that says "DONE"
+    PAUSE and WAIT for user to press a button
+
+    when a button is pressed:
+        if button pressed is "DONE":
+            set 'done' = TRUE
+        else if button pressed is "NEXT CASE":
+            resume program
+
+LOOP UNTIL 'done' = TRUE
+
+END
