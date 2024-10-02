@@ -2,3 +2,33 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+START
+
+'origin' = Get user's current location in the store from GPS (x,y coordinates)
+'youAreHere' = initialize to same value as 'origin'
+'dest' = Get destination from user input, convert to (x,y coordinates)
+
+const 'CLOSE_ENOUGH' = set to a constant value
+// represents the distance of user from destination or waypoint at which app can say "you've arrived"
+
+'distance' = calculate distance "as the crow flies" between 'youAreHere' & 'dest'
+
+WHILE 'distance' is greater than 'CLOSE_ENOUGH':
+
+    'horiz', 'vert' = calculate horizontal & vertical components of 'distance'
+
+    WHILE absolute value of 'horiz' is greater than 'CLOSE_ENOUGH'
+        IF 'horiz' is negative, tell user to go west
+        ELSE, tell user to go east
+
+    WHILE absolute value of 'vert' is greater than 'CLOSE_ENOUGH'
+        IF 'vert' is negative, tell user to go south
+        ELSE, tell user to go north
+
+    recalculate 'distance' between 'youAreHere' and 'dest'
+
+END WHILE
+
+tell user "you've arrived!"
+
+END
